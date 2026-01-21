@@ -1,0 +1,15 @@
+# Sweet Bliss Events Co. - Robots Configuration
+# Allow all search engines to crawl and index all pages
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or sensitive paths (if any exist in future)
+Disallow: /admin/
+Disallow: /*.pdf$
+
+# Specify sitemap for search engines
+Sitemap: https://mjmagno7447.github.io/SweetBliss/sitemap.xml
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
