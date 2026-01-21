@@ -165,6 +165,23 @@
 
 
   <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburgerBtn && navLinks) {
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerBtn.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+  </script>
+
+  <script>
     document.querySelectorAll('img').forEach(img => {
       img.addEventListener('contextmenu', e => e.preventDefault());
       img.addEventListener('dragstart', e => e.preventDefault());
